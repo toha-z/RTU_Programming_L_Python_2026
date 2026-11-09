@@ -64,7 +64,7 @@ def largest_city(populations: dict[str, int]) -> tuple[str, int]:
     # TODO: implement
     if not populations:
         return ("", 0)
-    city_name = max(populations, key=populations.get)
+    city_name = max(populations, key=lambda k: populations[k])
     return (city_name, populations[city_name])
 
 
@@ -73,7 +73,7 @@ def smallest_city(populations: dict[str, int]) -> tuple[str, int]:
     # TODO: implement
     if not populations:
         return ("", 0)
-    city_name = min(populations, key=populations.get)
+    city_name = min(populations, key=lambda k: populations[k])
     return (city_name, populations[city_name])
 
 
